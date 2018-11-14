@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <!--Give product a unique ID per platform-->
+  <?if $(var.Platform)=x64?>
+    <?define ProductCode="{28FAE21E-03D6-4CA3-A81D-1ABC7BFC2B80}"?>
+  <?else?>
+    <?define ProductCode="{36856370-D5CA-47AA-817C-105C214722B0}"?>
+  <?endif?>
+  
+  <!--Zmieniaj Guid po każdej aktualizacji tylko nie zmieniaj UpgradeCode!! -->
+  <?define BildVersion=0.3.4.8?>
+  <!--Fixed upgrade ID-->
+  <?define UpgradeCode="{7FF3DE0C-C3DD-4017-95FE-6447B1197086}"?>
+  
+  <!--Multi language get app version to project-->
+  <!--Define main product-->
+	<Product Id="$(var.ProductCode)" 
+           Name="!(loc.ProductName_$(var.Platform))"
+           Language="!(loc.Language)" 
+           Version="$(var.BildVersion)" 
+           Manufacturer="!(loc.Company)" 
+           UpgradeCode="$(var.UpgradeCode)">
+    <!--Provide package detalis -->
+		<Package InstallerVersion="200" 
+             Compressed="yes" 
+             InstallScope="perMachine" 
+             Platform="$(var.Platform)" 
+             Manufacturer="!(loc.Company)" 
+             Description="!(loc.Description)" 
+             Keywords="!(loc.Keywords)"
+             Comments="!(loc.Comments)" 
+             Languages="!(loc.Language)"/>
+
+    <!--Downgrage error message-->
+		<MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+    
+    <!--Include .cab file into .msi file-->
+		<MediaTemplate EmbedCab="yes" />
+    
+    <Icon Id="icon.ico" SourceFile="$(var.Schowek.ProjectDir)\Image\app.ico"/>
+    <!--use the icon.icon for this installer -->
+    <Property Id="ARPPRODUCTICON">icon.ico</Property>
+    <Property Id="ARPURLINFOABOUT">http://schowek.c0.pl/</Property>
+    
+    <!--Creat UI for installer WixUI_Minimal-->
+    <UIRef Id="WixUI_Minimal"/>
+    <!--Change the istaller Ui acgroud images-->
+    <WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp"/>
+    <WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp"/>
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\Licese.rft"/>
+    
+		<Feature Id="ProductFeature" Title="Schowek" Level="1">
+      
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="PublishedComponents" />
+      
+    </Feature>
+    
+	</Product>
+</Wix>

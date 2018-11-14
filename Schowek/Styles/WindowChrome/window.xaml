@@ -1,0 +1,110 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:properties="clr-namespace:Schowek.Properties"
+                    xmlns:local="clr-namespace:Schowek.Styles.WindowChrome" x:Class="Schowek.Styles.WindowChrome.WindowStyle">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="windowButton.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style x:Key="CustomWindowStyle" TargetType="{x:Type Window}">
+
+        <Setter Property="WindowChrome.WindowChrome" >
+            <Setter.Value >
+                <WindowChrome CaptionHeight="30"
+                              CornerRadius="0"
+                              GlassFrameThickness="0"
+                              NonClientFrameEdges="None"
+                              ResizeBorderThickness="6"
+                              UseAeroCaptionButtons="False" />
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="BorderBrush" Value="{Binding Source={x:Static properties:Settings.Default}, Path=ColorPrimary, Mode=TwoWay}" />
+        <!-- #16BCE0 -->
+        <Setter Property="Background" Value="WhiteSmoke" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Window}" >
+                    <Grid>
+
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="1,30,1,1" > 
+                            
+                            <AdornerDecorator>
+                                <ContentPresenter />
+                            </AdornerDecorator>
+                        </Border>
+
+                        <Grid Height="30"
+                            VerticalAlignment="Top">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+
+
+                            <TextBlock Margin="20,0,0,0"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontSize="16"
+                                       Foreground="White"
+                                       Text="{TemplateBinding Title}" 
+                                       Grid.Column="0"/>
+
+
+                            <StackPanel Orientation="Horizontal"
+                                        Grid.Column="2">
+
+                                <Button x:Name="btnSettings" 
+                                    Width="30"
+                                    Loaded="ButtonLoaded"
+                                    Click="MaximizeRestoreClick"
+                                    Style="{StaticResource btn}"
+                                    WindowChrome.IsHitTestVisibleInChrome="True" >
+                                    <StackPanel Width="20">
+                                        <materialDesign:PackIcon Kind="Settings" Foreground="{Binding Source={x:Static properties:Settings.Default}, Path=ColorFont, Mode=TwoWay}"/>
+                                    </StackPanel>
+                                </Button>
+                                
+                                <Button x:Name="btnClose"
+                                    Width="30"
+                                    Click="MinimizeClick"
+                                    VerticalContentAlignment="Bottom"
+                                    Style="{StaticResource btn}"
+                                    WindowChrome.IsHitTestVisibleInChrome="True" >
+                                    <StackPanel Width="20">
+                                        <Line
+                                            X1="3" Y1="10"
+                                            X2="17" Y2="10"
+                                            Stroke="{Binding Source={x:Static properties:Settings.Default}, Path=ColorFont, Mode=TwoWay}"
+                                            StrokeThickness="2" />
+                                        <!-- <Image Source="minimize.png" /> -->
+                                    </StackPanel>
+                                </Button>
+                                
+                                <Button x:Name="btnMinimize"
+                                    Width="30"
+                                    Click="CloseClick"
+                                    Style="{StaticResource btn}"
+                                    WindowChrome.IsHitTestVisibleInChrome="True" >
+
+                                    <StackPanel Width="20">
+                                        <materialDesign:PackIcon Kind="WindowClose" Foreground="{Binding Source={x:Static properties:Settings.Default}, Path=ColorFont, Mode=TwoWay}"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+
+                    </Grid>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

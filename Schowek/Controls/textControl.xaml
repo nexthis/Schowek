@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="Schowek.Controls.textControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:properties="clr-namespace:Schowek.Properties"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:ripple="clr-namespace:Schowek.RippleEffect"
+             xmlns:local="clr-namespace:Schowek.Controls"
+             mc:Ignorable="d" 
+             Name="textUserControl"
+             d:DesignHeight="200" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Border Background="{Binding Source={x:Static properties:Settings.Default}, Path=ColorBorder, Mode=TwoWay}" CornerRadius="10,0,0,10" >
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="34"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Background="#89cf7f"   CornerRadius="10,0,0,10"/>
+
+            <RichTextBox x:Name="richTextBox" FontSize="15px"  Panel.ZIndex="1" Hyperlink.Click="richTextBox_Click"  Grid.Column="1" Padding="5,5,0,5"  BorderThickness="0"  IsReadOnly="True"  IsDocumentEnabled="True" Background="Transparent">
+            </RichTextBox>
+
+            <ripple:RippleEffectDecorator x:Name="RippleEffect"  Panel.ZIndex="2" Grid.Column="1"  Grid.ColumnSpan="2" Height="Auto" MouseLeftButtonDown="RippleEffectDecorator_MouseLeftButtonDown" Background="Transparent" HighlightBackground="#7F89CF7F" />
+            <DockPanel Grid.Column="2" Panel.ZIndex="3">
+            <materialDesign:PopupBox
+                              DockPanel.Dock="Top"
+                              StaysOpen="False"
+                              Margin="0,5,0,0" VerticalAlignment="Top">
+
+                <Menu>
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel Orientation="Vertical"/>
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <MenuItem Click="MenuItem_Click"
+                        Header="Usuń" />
+                    <MenuItem Click="MenuItem_Click_1" Name="use"
+                        Header="Użyj" />
+                    <MenuItem Click="MenuItem_Click_2"
+                        Header="Zwykły tekst" />
+                </Menu>
+
+            </materialDesign:PopupBox>
+
+            <ToggleButton  Panel.ZIndex="3"
+                           VerticalAlignment="Bottom"
+                           Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"
+                           ToolTip="Jeszcze niedostępne :-("
+                           Margin="0,0,0,5"
+                           Background="#FFACFFA0"
+                           Foreground="#89cf7f"
+                           IsChecked="False" Width="25" Height="25">
+                <materialDesign:PackIcon
+                    Kind="Heart"
+                    Height="19"
+                    Width="19" />
+            </ToggleButton>
+             </DockPanel>
+
+
+
+        </Grid>
+
+    </Border>
+
+
+
+</UserControl>

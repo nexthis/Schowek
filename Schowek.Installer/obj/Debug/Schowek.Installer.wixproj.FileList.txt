@@ -1,0 +1,11 @@
+obj\Debug\Product.wixobj
+C:\Users\pawcioo\Documents\Visual Studio 2017\Projects\SchowekV2\Schowek.Installer\bin\Debug\en-us\Schowek.Installer.msi
+C:\Users\pawcioo\Documents\Visual Studio 2017\Projects\SchowekV2\Schowek.Installer\bin\Debug\en-us\Schowek.Installer.wixpdb
+obj\Debug\Components.wixobj
+obj\Debug\Directories.wixobj
+obj\Debug\ComponentsGenerated.wixobj
+obj\Debug\Schowek.Installer.wixproj.BindContentsFileListnull.txt
+obj\Debug\Schowek.Installer.wixproj.BindOutputsFileListnull.txt
+obj\Debug\Schowek.Installer.wixproj.BindBuiltOutputsFileListnull.txt
+C:\Users\pawcioo\Documents\Visual Studio 2017\Projects\Schowek\Schowek.Installer\bin\Debug\Schowek--x86.msi
+C:\Users\pawcioo\Documents\Visual Studio 2017\Projects\Schowek\Schowek.Installer\bin\Debug\Schowek--x86.wixpdb
