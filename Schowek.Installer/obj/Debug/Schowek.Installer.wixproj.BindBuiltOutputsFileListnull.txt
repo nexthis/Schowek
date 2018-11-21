@@ -1,2 +1,0 @@
-C:\Users\pawcioo\Documents\Visual Studio 2017\Projects\Schowek\Schowek.Installer\bin\Debug\Schowek--x86.msi
-C:\Users\pawcioo\Documents\Visual Studio 2017\Projects\Schowek\Schowek.Installer\bin\Debug\Schowek--x86.wixpdb

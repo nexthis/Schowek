@@ -1,9 +1,0 @@
-C:\Users\pawcioo\Documents\Visual Studio 2017\Projects\Schowek\Schowek.Installer\bin\Release\Schowek--x86.msi
-C:\Users\pawcioo\Documents\Visual Studio 2017\Projects\Schowek\Schowek.Installer\bin\Release\Schowek--x86.wixpdb
-obj\Release\Components.wixobj
-obj\Release\ComponentsGenerated.wixobj
-obj\Release\Directories.wixobj
-obj\Release\Product.wixobj
-obj\Release\Schowek.Installer.wixproj.BindContentsFileListnull.txt
-obj\Release\Schowek.Installer.wixproj.BindOutputsFileListnull.txt
-obj\Release\Schowek.Installer.wixproj.BindBuiltOutputsFileListnull.txt
