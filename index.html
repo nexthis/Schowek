@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#56bae5" />
+    <meta name="author" content="Paweł Romanowski">
+    <meta name="keywords" content="Schowek,schowek,schowek windows,schowek windows 10,windows clipboard,clipboard,clipboard for windows">
+    <meta name="description" content="Schowek to nieskomplikowana aplikacja służąca do przechowywania elementów skopiowanych podczas codziennej pracy.">
+
+    <meta name="google-site-verification" content="rKmCMY1JTI4cQPLQ2iqa0dCtH4EnhSla28uD0B5xTNY" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126243074-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-126243074-1');
+    </script>
+
+    <title>Schowek</title>
+    <link href="image/app.ico" rel="shortcut icon" type="image/x-icon" />
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--AOS-->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <!--Css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lemonada" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/main-style.css?v=0.4">
+    <link rel="stylesheet" href="css/switch.css?v=0.1">
+
+    <!--[if lt IE 9]>
+	    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+   
+</head>
+<body>
+    <!--Menu-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"  id="Menu" >
+        <a class="navbar-brand" href="#admission" data-href="#admission">Schowek</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar" >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#requirements" data-href="#requirements">Pobierz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#change" data-href="#change">Zmiany</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#otherProject" data-href="#otherProject">Inne projekty</a>
+            </li>    
+            <li class="nav-item">
+                <a class="nav-link" href="#author" data-href="#author">O Autorze</a>
+            </li>   
+            <li class="nav-item">
+                <a class="nav-link" href="#contact" data-href="#contact">Kontakt</a>
+            </li>   
+ 
+          </ul>
+          
+          <form class="form-inline ">
+            <a class="menu-icon mr-4" href="http://schowek.c0.pl/komentarze" ><i class="fas fa-comment-alt"></i></a>  
+            <span class="switch switch-sm ">
+              <input type="checkbox" class="switch" name="1" id="switch-sm">
+              <label id="style-text" for="switch-sm">Czarny Styl </label>
+            </span>
+            
+          </form>
+
+        </div>  
+      </nav>
+      
+      <!--Menu Mobile-->
+      <nav class="navbar navbar-expand-xl  bg-dark navbar-dark fixed-top sidebarNavigation"  id="MenuMobile" >
+          <div class="row no-gutters">
+              <div class="col-sm-2 col-3 ">
+                <button class="navbar-toggler" id="rightMenuToggler"  data-toggle="collapse" data-target="#rightMenu" aria-controls="rightMenu" aria-expanded="false" >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+              <a href="#admission" data-href="#admission" class="navbar-brand text-center mr-0 col-sm-8 col-6">Schowek</a>
+              <form class="form-inline  col-sm-2 col-3 ">
+                <span class="switch switch-sm ml-auto">
+                  <input type="checkbox" class="switch " name="1" id="switch-mb">
+                  <label id="style-text" for="switch-mb" class="mb-0"></label>
+                </span>
+              </form>
+
+          </div>
+
+          <div class="collapse navbar-collapse" id="rightMenu">
+              <ul class="navbar-nav mr-auto">
+                    <li class="nav-item" >
+                      <a class="nav-link" href="#requirements" data-href="#requirements" >Pobierz</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#change" data-href="#change">Zmiany</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#otherProject" data-href="#otherProject">Inne projekty</a>
+                    </li>    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#author" data-href="#author">O Autorze</a>
+                    </li>   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-href="#contact">Kontakt</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="btn  btn-outline-light w-100" href="http://schowek.c0.pl/komentarze" >Komentarze</a>
+                    </li> 
+              </ul>
+          </div>
+      </nav>
+
+
+
+
+
+  <main>
+
+<!--Admission-->
+<section class="jumbotron" style="margin-top: 70px;" id="admission">
+    <div class="container" >
+        <h1 class="title text-center" style="padding-bottom: 10px;">Schowek</h1>
+        <p class="lead text-muted text-center ">To nieskomplikowana aplikacja służąca do przechowywania elementów skopiowanych podczas codziennej pracy.  Poradzi sobie z wysoko postawioną poprzeczką każdego użytkownika, oferując najbardziej zaawansowaną funkcjonalność wśród wszystkich schowków!</p>
+
+        <div class="row">
+            <div class="col-md-6" >
+              <div class="single-feature d-flex flex-wrap justify-content-between">
+                <div class="icon">
+                  <img src="https://png.icons8.com/nolan/96/f1c40f/color-dropper.png">
+                </div>
+                <div class="desc">
+                  <h4>Dostosowany do ciebie</h4>
+                  <p>Aplikacja posiada aktualnie dwa style kolorystyczne oraz bogaty wachlarz ustawień </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-feature d-flex flex-wrap justify-content-between">
+                <div class="icon">
+                    <img src="image/icons8-hand.png">
+                </div>
+                <div class="desc">
+                  <h4>Zawsze pod ręką</h4>
+                  <p>Za pomocą skrótu klawiszowego Ctrl +Shift + Z masz swobodny dostęp do schowka, dzięki czemu zawsze możesz go ukryć bądź pokazać. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-feature d-flex flex-wrap justify-content-between">
+                <div class="icon">
+                  <img src="image/icons8-shekel.png">
+                </div>
+                <div class="desc">
+                  <h4>Nowoczesny</h4>
+                  <p>Estetyczna oprawa graficzna, intuicyjny interfejs, oraz szeroki wachlarz możliwości kopiowania do schowka (muzyka, tekst, obraz, pliki) wyróżniają tę aplikację na tle innych tego typu! </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-feature d-flex flex-wrap justify-content-between">
+                <div class="icon">
+                  <img src="https://png.icons8.com/nolan/96/f1c40f/bullish.png">
+                </div>
+                <div class="desc">
+                  <h4>Ciągle rozwijany</h4>
+                  <p>Aplikacja występuje obecnie w wersji beta. Stale rozwijana, będzie za każdym razem na nowo ujawniać definicję idealnego schowka. <br> o nadchodzących zmianach możesz przeczytać <a href="#change" data-href="#change">tutaj</a>  </p>
+                </div>
+              </div>
+            </div>
+          </div>   
+    </div>
+  </section>
+
+<!--Photos-->   
+<section class="jumbotron text-center" id="photos">
+    <div class="container"  >
+      <h1 class="title" >Piękno i prostota</h1>
+      <div class="gallery-main">
+        <div class="gallery">
+            <img class="zoom" src="image/Przechwytywanie.PNG" alt="">
+        </div>
+        <div class="gallery">
+            <img class="zoom" src="image/Przechwytywanie1.PNG" alt="">
+        </div>
+        <div class="gallery">
+            <img class="zoom" src="image/Przechwytywanie2.PNG" alt="">
+        </div>
+        <div class="gallery">
+            <img class="zoom" src="image/Przechwytywanie3.PNG" alt="">
+        </div>
+      </div>
+      
+      <div id="phone-gallery" style="display: none; margin-top: 30px;" class="carousel slide" data-ride="carousel">
+
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active gallery-smoll">
+            <img src="image/Przechwytywanie.PNG" alt="">
+          </div>
+          <div class="carousel-item gallery-smoll">
+            <img src="image/Przechwytywanie1.PNG" alt="">
+          </div>
+          <div class="carousel-item gallery-smoll">
+            <img  src="image/Przechwytywanie2.PNG" alt="">
+          </div>
+          <div class="carousel-item gallery-smoll">
+              <img src="image/Przechwytywanie3.PNG" alt="">
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#phone-gallery" data-slide="prev">
+          <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#phone-gallery" data-slide="next">
+          <i class="fas fa-chevron-right"></i>
+        </a>
+      
+      </div>
+      <p style="padding-top: 30px;" class="lead text-muted">Niniejsza aplikacja łączy przyjemność użytkowania z profesjonalnym zastosowaniem. Dzięki niej, organizacja stanowiska pracy i segregacja ważnych elementów podczas wykonywanej pracy to najmniejsze ze zmartwień!</p>
+    </div>
+</section>
+
+
+<!--Requirements-->
+      <section class="jumbotron " id="requirements" >
+        <div  class="container resp">
+          <h1 class="text-center title" data-aos="zoom-out" >Na co czekasz?? Wypróbuj już teraz!!</h1>
+          <h4 style="margin-top: 50px;" class="text-center" data-aos="zoom-out" >Minimalne wymagania</h4>
+            <div  class="row">
+              <div class="col-lg-3 col-6 text-center mt-md-2 mt-3" data-aos="zoom-in" >
+                <h5>CPU</h5>
+                <img src="image/CPU Processor free icon 1.svg" alt="" srcset="" style="padding: 5px;" height="150px" width="150px">
+                <h6>Procesor Pentium 1 GHz <br> lub odpowiednik</h6>
+              </div>
+              <div class="col-lg-3 col-6 text-center mt-md-2 mt-3" data-aos="zoom-in">
+                <h5>System</h5>
+                <img src="image/Laptop free icon 1.svg" alt="" srcset="" height="150px" width="150px">
+                <h6>Windows Vista</h6>
+              </div>            
+              <div class="col-lg-3 col-6 text-center mt-md-2 mt-4" data-aos="zoom-in">
+                <h5>NET. Framework</h5>
+                <img src="image/Microsoft_.NET_logo.png" alt="" srcset="" style="padding: 11px;" height="150px" width="150px">
+                <h6>Wersja 4.6.1</h6>
+              </div>
+              <div class="col-lg-3 col-6 text-center mt-md-2 mt-4" data-aos="zoom-in">
+                <h5>RAM&nbsp;</h5>
+                <img src="image/Ram Memory free icon 7.svg" alt="" srcset="" height="150px" width="150px">
+                <h6>0,5 GB</h6>
+              </div>
+            </div>
+
+            <button style="margin-top: 50px;" data-aos="fade-up" onclick="window.open('application/Schowek-installer-0.3.4.8.msi')" type="button" name="" data-toggle="modal" data-target="#modal-download" id="download" class="btn btn-success" >Pobierz Teraz</button>
+        </div>
+      </section>
+      
+<!--Change-->
+
+      <section class="jumbotron text-center" id="change">
+          <div class="container" >
+              <h1 class="title" style="padding-bottom: 10px;" data-aos="zoom-in">Zmiany</h1>
+              
+              <div style="margin-top: 30px;" class="list-group" data-aos="fade-right">
+                  <div  class="list-group-item flex-column align-items-start ">
+                      <div  class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Czasem trzeba powiedzieć stop</h5>
+                        <small id="data4" data="09/29/2018" ></small>
+                      </div>
+                      <h5 class="p-5">Schowek to mój pierwszy poważny projekt. Aplikacja ma wiele wad konstrukcyjnych to też postanowiłem wstrzymać jego dalszy rozwój (przynajmniej na razie) chcę skupić swoją uwagę na moich nowych projektach i nowych technologiach (programowania) w razie jakichkolwiek pytań zapraszam <a href="#contact" data-href="#contact">tu</a> bądź <a href="http://schowek.c0.pl/komentarze">tutaj</a></h5>
+                    <small>Do zobaczenia niebawem...</small>
+                  </div>
+              </div>
+
+              <div style="margin-top: 30px;" class="list-group" data-aos="fade-left">
+                <div  class="list-group-item flex-column align-items-start ">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Długo nie czekaliście ?? </h5>
+                    <small id="data3" data="09/29/2018"></small>
+                  </div>
+                  <ul class="list-group">
+                      <li class="list-group-item list-group-item-warning">Naprawa błędów w tekście html</li>
+                      <li class="list-group-item list-group-item-success">Dodano wyszukiwarkę  </li>
+                      <li class="list-group-item list-group-item-danger">Naprawa niektórych błędów krytycznych </li>
+                      <li class="list-group-item list-group-item-success">Dodana całkiem nowy !! super !! wygląd 😊 !! </li>
+                      <li class="list-group-item list-group-item-info">Poprawiono kontrolkę muzyki </li>
+                  </ul>
+                  <small>Wersja: 0.3.4.8</small>
+                </div>
+            </div>
+
+              <div style="margin-top: 30px;" class="list-group" data-aos="fade-left">
+                <div  class="list-group-item flex-column align-items-start ">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Kolejna wersja już na ciebie czeka !!</h5>
+                    <small id="data2" data="09/24/2018"></small>
+                  </div>
+                  <ul class="list-group">
+                      <li class="list-group-item list-group-item-warning">Naprawa błędów w tekście html</li>
+                      <li class="list-group-item list-group-item-success">Dodano automatyczne aktualizacje </li>
+                      <li class="list-group-item list-group-item-success">Dodano obsługę folderów</li>
+                      <li class="list-group-item list-group-item-danger">Naprawa niektórych błędów krytycznych </li>
+                      <li class="list-group-item list-group-item-success">Dodano własne skróty klawiszowe </li>
+                      <li class="list-group-item list-group-item-info">Poprawiono kontrolkę muzyki </li>
+                  </ul>
+                  <small>Wersja: 0.2.2.6</small>
+                </div>
+            </div>
+
+              <div style="margin-top: 30px;" class="list-group" data-aos="fade-right">
+                <div  class="list-group-item flex-column align-items-start ">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Wystartowała wersja beta !!</h5>
+                    <small id="data1" data="08/07/2018"></small>
+                  </div>
+                  <ul class="list-group">
+                      <li class="list-group-item list-group-item-success">Dodano obsługę tekstu</li>
+                      <li class="list-group-item list-group-item-success">Dodano obsługę zdjęć</li>
+                      <li class="list-group-item list-group-item-success">Dodano obsługę muzki</li>
+                      <li class="list-group-item list-group-item-success">Dodano obsługę linków</li>
+                      <li class="list-group-item list-group-item-success">Dodano skrót klawiszowy Ctrl+Shift+Z</li>
+                  </ul>
+                  <small>Wersja: 0.0.0.1</small>
+                </div>
+            </div>
+          </div>
+        </section>
+
+<!--Other design-->
+        <section class="jumbotron" id="otherProject" >
+          <div class="container"  > <!--data-aos="fade-righ"-->
+            <h1 class="text-center title" data-aos="zoom-in">Inne Projekty</h1>
+            <br>
+            <div class="row">
+              <div class="col-md-2 col-sm-3  text-center" data-aos="flip-left">
+                <a href="#">
+                  <img src="image/corex.png" alt="" srcset="" width="100px">
+                </a>
+              </div>
+              <div class="col-md-10 col-sm-9 " data-aos="flip-right">
+                  <a style="color:#98cb00; font-size: 30px;" href="#"> CGC -</a>
+                  <span class="lead text-muted "> To kolejna ciekawa propozycja. Program jest w fazie projektu. Głównym założeniem jest stworzenie aplikacji, której zadaniem będzie wspieranie graczy podczas rozgrywki (bardzo przydatna przy dwóch ekranach, planowana wersja na androida). Program będzie wyświetlać szczegółowe statystyki o aktualnie uruchomionym tytule, a także wyświetlać mini-mapy z gier takowe posiadające. W pakiet również wchodzi tworzenie makr w myszce, jak i klawiaturze oraz wiele innych!  </span>
+              </div>
+            </div>
+            
+            <br>
+            <hr>
+            <br>
+
+            <div class="row">
+              <div class="col-md-2 col-sm-3  text-center" data-aos="flip-left">
+                <a href="#">
+                  <img src="image/Raspb.png" alt="" srcset="" width="100px">
+                </a>
+              </div>
+              <div class="col-md-10 col-sm-9 " data-aos="flip-right">
+                  <a style="color:#bb1142; font-size: 30px;" href="#"> Raspp -</a>
+                  <span class="lead text-muted">To koncepcja mocno związana z projektem Corel. Różnica jest taka, że będzie to osobne urządzenie stworzone z myślą o wspomnianej już aplikacji, lecz będzie możliwość używania go jako typowego tableta do instalowania aplikacji itd. </span>
+              </div>
+            </div>
+            <br>
+          </div>
+        </section>
+
+<!--About the author-->
+        <section class="jumbotron"  id="author">
+          <h1 style="padding-bottom: 30px;" class="text-center title" data-aos="zoom-in">O Autorze</h1>
+          <div class="container" >
+            <!--first column-->
+              <div class="row h4-size"  >
+                  <div class="col-sm-5 col-md-4 author1" 
+                    data-aos="fade-right" id="progresEvent">
+                    <img id="img" src="image/pawel.jpg" alt="" srcset="">
+                    <h2 class="text-center">Paweł Romanowski</h2>
+                    <hr>
+                    <h3 class="text-center">Umiejętności</h3>
+
+                    <div class="row" style="margin-top: 30px;">
+                      <div class="col-sm-4">
+                        <h4 class="text-center" style="color:#993399;">C#</h4>
+                      </div>
+                      <div class="col-sm-8">
+                          <div class="progress" style="margin-top: 9px;">
+                              <div class="progress-bar" id="progress1" style="width:0%; background:#993399;"></div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <h4 class="text-center mt-sm-0 mt-3 mb-sm-2 mb-0" style="color:#ff3333;">Java</h4>
+                      </div>
+                      <div class="col-sm-8">
+                          <div class="progress" style="margin-top: 9px;">
+                              <div class="progress-bar" id="progress2" style="width:0%; background:#ff3333;"></div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <h4 class="text-center mt-sm-0 mt-3 mb-sm-2 mb-0" style="color:#cc3333;">Html</h4>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="progress" style="margin-top: 9px;">
+                                <div class="progress-bar" id="progress3" style="width:0%; background:#cc3333;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <h4 class="text-center mt-sm-0 mt-3 mb-sm-2 mb-0" style="color:#34aadc;">CSS</h4>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="progress" style="margin-top: 9px;">
+                                <div class="progress-bar" id="progress4" style="width:0%; background:#34aadc;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <h4 class="text-center mt-sm-0 mt-3 mb-sm-2 mb-0" style="color:#ffcc66;">JS</h4>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="progress" style="margin-top: 9px;">
+                                <div class="progress-bar" id="progress5" style="width:0%; background:#ffcc66;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                          <h4 class="text-center mt-sm-0 mt-3 mb-sm-2 mb-0" style="color:#6666cc;">PHP</h4>
+                        </div>
+                        <div class="col-sm-8" >
+                            <div class="progress" style="margin-top: 9px; ">
+                                <div class="progress-bar" id="progress6" style="width:0%; background:#6666cc; "></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <h4 class="text-center mt-sm-0 mt-3 mb-sm-2 mb-0" style="color:#6699cc;">C++</h4>
+                      </div>
+                      <div class="col-sm-8">
+                          <div class="progress" style="margin-top: 9px;">
+                              <div class="progress-bar" id="progress7" style="width:0%; background:#6699cc;"></div>
+                          </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!--second column-->
+                  <div class="col-sm-7 col-md-8 p-4" style="background-color:whitesmoke;" data-aos="fade-left">
+                      <h1 style="margin-top: 9px;" class="text-center black">C++</h1> 
+                      <p class="lead muted">To od tego języka zacząłem swoją przygodę z programowaniem, jednakże po przyswojeniu podstaw takich jak: Klasy, Dziedziczenie, czy Funkcje, przesiadłem się na C#. C++ obecnie służy mi głównie do programowania elektroniki. </p>
+                      <h1 style="margin-top: 9px;" class="text-center black">C#</h1> 
+                      <p class="lead muted">To aktualnie mój preferowany język. Skupiam się za jego pomocą głównie na technologii WPF. C# jest językiem o wielu możliwościach który wspiera wiele platform. </p>
+                      <h1 style="margin-top: 9px;" class="text-center black">WEB</h1> 
+                      <p class="lead muted">Web czyli grupa języków stricte związana z pisaniem stron internetowych js, html, css, php… (chociaż po pojawieniu się node js czy frameworku typu electron nie jest to tak oczywiste 😉). Pisanie stron internetowych to dla mnie jeszcze nowość, tak więc Jestem jeszcze w trakcie nauki 😊</p>
+                  </div>
+
+              </div>
+          </div>
+        </section>
+
+        <!--footer-->
+        <footer  id="contact" >
+          <div class="jumbotron jumbotron-fluid footer-bg-color mb-0 pt-4">
+            <div class="container" id="footer">
+                <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                      <h1 class="footer-centered ">Linki</h1>
+                      <hr>
+                      <p> <a href="https://fontawesome.com/" style="color: #336699;" target="blank"> <h5 class="footer-centered">Fontawesome</h5></a></p>
+                      <p> <a href="https://icons8.com/" style="color: #0d8b37;"  target="blank"><h5 class="footer-centered">Icons8</h5></a></p>
+                      <p> <a href="https://getbootstrap.com/" style="color: #663366;" target="blank"><h5 class="footer-centered">Bootstrap</h5></a></p>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                      <h1 class="footer-centered mt-lg-0 mt-md-2 mt-2">Kontakt</h1>
+                      <hr>
+                      <div class="row" style="margin-left: 1px">
+                        <div class="footer-centered-icon">
+                          <div class="collapse width footer-text-icon" id="contentCt" > <span id="Phone" class="lead mb-1">Nr:&nbsp;Jeszcze&nbsp;niedostępny&nbsp; </span></div> 
+                          <a data-toggle="collapse" data-target="#contentCt" aria-expanded="false" aria-controls="contentCt"> 
+                            <div class="iconRound iconCt"><i class="fas fa-phone-slash"></i></div>
+                          </a>
+                        </div>
+                      </div> 
+                      <div class="row" style="margin-left: 1px">
+                        <div class="footer-centered-icon">
+                          <div class="collapse width footer-text-icon" id="contentGm" ><span id="Gamil" class="lead mb-1">pawel.romnowski000@gmail.com&nbsp;</span>  </div> 
+                          <a data-toggle="collapse" data-target="#contentGm" aria-expanded="false"aria-controls="contentGm"> 
+                              <div class="iconRound mt-1 iconGm"><i class="fas fa-envelope"></i></div>
+                          </a>
+                        </div>
+                      </div> 
+<!--
+                      <div class="row" style="margin-left: 1px">
+                        <div class="footer-centered-icon">
+                          <div class="collapse width footer-text-icon" id="contentFb"> <a href="https://www.facebook.com/" target="_blank" > <span class="lead mb-1">https://www.facebook.com/&nbsp;</span> </a></div> 
+                          <a data-toggle="collapse" data-target="#contentFb" aria-expanded="false"aria-controls="contentFb"> 
+                              <div class="iconRound mt-1 iconFb"><i class="fab fa-facebook-f"></i></div>
+                          </a>
+                        </div>
+                      </div> 
+-->
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                        <h1 class="footer-centered mt-lg-0 mt-md-2 mt-2">Podziękowania</h1>
+                        <hr>
+                        <h5 class="footer-centered">Alan Arthur Wiśniewski</h5>
+                        <p class="lead mb-1 footer-centered" >Za napisanie tekstu do tej strony</p>
+                        <div class="row" style="margin-left: 1px">
+                          <div class="footer-centered-icon">
+                            <div class="collapse width footer-text-icon" id="contentFbA"><a href="https://www.facebook.com/alanartur.wisniewski" target="_blank" ><span class="lead mb-1">https://www.facebook.com/&nbsp;</span> </a></div> 
+                            <a data-toggle="collapse" data-target="#contentFbA" aria-expanded="false"aria-controls="contentFbA"> 
+                                <div class="iconRound mt-1 iconFb"><i class="fab fa-facebook-f"></i></div>
+                            </a>
+                          </div>
+                        </div> 
+                        
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal-download">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  <h4 class="modal-title">Dziękuje za pobranie aplikacji</h4>
+                  <button type="button" id="modal-close" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+
+                  <div id="carouselModal" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item active">
+                          Aplikacja jest w pełni darmowa <br>
+                          Jeżeli "Schowek" przypadł Tobie do gustu i z niecierpliwością czekasz na jego aktualizacje, bądź dalszy rozwój mojego portfolio, możesz mnie wesprzeć dobrowolną dotacją
+                      </div>
+                      <div class="carousel-item">
+                        Nr konta: <strong>51 1160 2202 0000 0003 3195 9203</strong> <br>
+                        <br>
+                        <a class="btn btn-success ml-auto mr-auto" href="#" role="button">Profil Patronite</a>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+    
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-target="#carouselModal" data-slide-to="1" >Dotacja</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+        <!--snackbar-->
+        <div id="snackbar">Skopiowano do Showka</div>
+    </main>
+     <!-- JavaScript -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+     <script src="js/scroll.js?v=0.1"></script>
+     <script src="js/aos.js?v=0.1"></script>
+     <script src="js/footer.js?v=0.1"></script>
+     <script src="js/author.js?v=0.1"></script>
+     <script src="js/gallery.js?v=0.1"></script>
+     <script src="js/theme.js?v=0.2"></script>
+     <script src="js/data.js?v=0.1"></script>
+     <script src="js/menu.js?v=0.2"></script>
+
+     <script>
+      $("body > div").remove()
+     </script>
+     
+</body>
+</html>			
